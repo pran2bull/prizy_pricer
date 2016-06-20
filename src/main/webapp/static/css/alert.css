@@ -1,0 +1,65 @@
+.alert-success {
+	display: none;
+	background-color: #00a65a;
+	text-align: center;
+	opacity: 0.6;
+	position: fixed;
+	bottom: 0px;
+	margin: 0px 0%;
+	width: 95%;
+	padding: 8px 2%;
+	z-index: 9999;
+	border-radius: 4px 4px 0px 0px;
+}
+
+.alert-danger {
+	display: none;
+	background-color: #dd4b39;
+	text-align: center;
+	opacity: 0.6;
+	position: fixed;
+	bottom: 0px;
+	margin: 0px 0%;
+	width: 95%;
+	padding: 8px 2%;
+	z-index: 9999;
+	border-radius: 4px 4px 0px 0px;
+	background-color: #dd4b39;
+}
+
+input, textarea, select {
+	width: 100%;
+}
+
+.overlay {
+	display: none; background : rgba( 62, 62, 62, 0.3) none repeat scroll 0%
+	0%;
+	color: rgb(255, 255, 255);
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	background: rgba(62, 62, 62, 0.3) none repeat scroll 0% 0%;
+}
+
+.overlay>div {
+	font-size: 30px;
+	margin-top: 15%;
+}
+
+.overlay>div>span {
+	display: block; } .overlay > div > a {
+	font-size: 20px;
+}
+
+code {
+	background: rgb(197, 197, 197) none repeat scroll 0% 0%;
+	height: 100%;
+	width: 100%;
+	display: block;
+	border-radius: 3px;
+	padding: 5px 0px;
+	margin-top: 74px;
+}

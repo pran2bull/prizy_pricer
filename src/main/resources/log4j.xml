@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration debug="true" xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+    <appender name="FILE1" class="org.apache.log4j.DailyRollingFileAppender"> 
+            <param name="File" value="/opt/app_logs/PRIZY_INFO.log"/>
+            <param name="DatePattern" value="'.'yyy-MM-dd"/>
+            <param name="Append" value="true"/>
+            <layout class="org.apache.log4j.PatternLayout"> 
+                    <param name="ConversionPattern" value="[%-5p] %-4r %d{dd MMM yyyy HH:mm:ss} [%t] %c %x - %m%n"/> 
+            </layout> 
+    </appender> 
+
+    <appender name="FILE2" class="org.apache.log4j.DailyRollingFileAppender"> 
+            <param name="File" value="/opt/app_logs/PRIZY_ERROR.log"/>
+             <param name="DatePattern" value="'.'yyy-MM-dd"/>
+             <param name="Append" value="true"/> 
+            <layout class="org.apache.log4j.PatternLayout"> 
+                    <param name="ConversionPattern" value="[%-5p] %-4r %d{dd MMM yyyy HH:mm:ss} [%t] %c %x - %m%n"/> 
+            </layout> 
+
+            <!-- Use LevelMatchFilter to write only ERROR messages to error.log -->
+            <filter class="org.apache.log4j.varia.LevelMatchFilter">
+                    <param name="LevelToMatch" value="error" />
+                    <param name="AcceptOnMatch" value="true"/>
+            </filter>
+            <filter class="org.apache.log4j.varia.DenyAllFilter" />
+    </appender> 
+
+    <root> 
+            <level value="INFO"/>
+            <appender-ref ref="FILE1" /> 
+            <appender-ref ref="FILE2" /> 
+    </root>
+</log4j:configuration>
